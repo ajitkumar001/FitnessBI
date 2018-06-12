@@ -1,0 +1,68 @@
+.navbar-default {
+
+  .navbar-inner{
+
+    background-color: $white;
+    min-height: $navbar-height;
+    @include noBoxShadow();
+    background-image: none;
+    border: 0px;
+
+    @media (max-width: $mobileWidthPhone) {
+      min-height: $navbar-xs-height;
+    }
+
+    .container {
+
+      .navbar-brand, .brand {
+        background-image: url("../img/cigna_logo_h_color_nav.png");
+        background-repeat: no-repeat;
+        width: 92px;
+        height: 30px;
+        top: 10px;
+        position: relative;
+        font-size: 30pt;
+        margin-left: 0;
+        padding: 0;
+      }
+
+      .app-name {
+        position: relative;
+        margin-left: 100px;
+        font-size: 14pt;
+        line-height: 21pt;
+        display: inline;
+        top: -2px;
+      }
+
+      .top-nav {
+        
+        ul {
+          list-style-type: none;
+
+          li {
+            float: left;
+          }
+        }
+      }
+
+      .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+        color: $white;
+        text-decoration: none;
+        background-color: $green;
+      }
+    }
+  }
+}
+
+.navbar-fixed-top {
+  .row {
+    padding: 0;
+    line-height: 21pt;
+    height: 30px;
+
+    .col-xs-10, .span10 {
+      padding-left: 0;
+    }
+  }
+}

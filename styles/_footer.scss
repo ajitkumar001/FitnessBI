@@ -1,0 +1,33 @@
+$footer-height: 50px;
+$footer-mobile-height: 70px;
+
+.footer {
+
+  padding-top: 10px;
+  background-color: #000;
+  overflow: hidden;
+
+  .copyright {
+	  color: #fff;
+	}
+
+	.span3 {
+	  margin-left: 10px;
+	}
+
+	h6, ul {
+		color: #fff;
+	}
+
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		font-size: small;
+	}
+
+  @media (max-width: $mobileWidthPhone) {
+    height: $footer-mobile-height;
+    text-align: center;
+  }
+
+}

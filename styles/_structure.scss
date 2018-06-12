@@ -1,0 +1,17 @@
+body {
+
+  height: 100% !important;
+  background-color: $white;
+
+  #wrap-page{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0px auto -43px;
+  }
+
+  #push-down {
+    height: 112px; //62 px for footer 50px for spacing
+  }
+
+}

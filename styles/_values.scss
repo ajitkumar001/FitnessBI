@@ -1,0 +1,97 @@
+//fonts
+$fontWeightLgt: 100;
+$fontWeightMdm: 200;
+
+//colors
+$black: #000;
+$white: #fff;
+$drkGrey: #595959;
+$midGrey: #B5B5B5;
+$lgtGrey: #e7e7e8;
+$lgtBlue: #D2EFFF;
+$blue: #00AEEF;
+$drkBlue: #002851;
+$myCignaBlue: #0881c5;
+$yellow: #fdc82f;
+$lgtYellow: #FFDB80;
+$green: #269800;
+$mdmGreen: #CBDB2A;
+$red: #D94634;
+$orange: #F8980C;
+$purple: #5D2567;
+
+$divider: #d8e5e8;
+
+$transBlack: rgba(0, 0, 0, 0.05);
+$transWhite: rgba(255, 255, 255, 0.3);
+$transDrkGrey: rgba(89, 89, 89, 0.9);
+$transBlue: rgba(0, 174, 239, 0.8);//rgba(46, 167, 242, 0.8);
+$transYellow: rgba(252, 200, 0, 0.7);
+$transGreen: rgba(38, 152, 0, 0.7);
+$transRed: rgba(217,70,52,0.7);
+$transOrange: rgba(248,152,12,0.7);
+$translgtGrey: rgba(220,220,220,0.4);
+$tableRow: rgba(0, 0, 0, 0.05);
+
+//color uses
+$error: $red;
+$link-text: $blue;
+$link-hover-text: $green;
+$primary-btn-hover: $green;
+$btn: $white;
+$btn-text: $blue;
+$primary-btn: $blue;
+$primary-btn-text: $white;
+$header-bdr: $blue;
+$footer-bdr: $midGrey;
+$button-disabled: #DDD;
+$input-border-color: #ccc;
+
+//sizes
+$mobileWidthPhone: 767px;
+$centerColumnPaddedWidth: 1020px;
+$centerColumnWidth: 990px;
+$minCenterColumnWidth: 660px;
+$standardCornerRadius: 4px;
+$largeCornerRadius: 6px;
+$cellSpacer: 28px;
+$navbar-height: 50px;
+$navbar-xs-height: 50px;
+
+@mixin standardBorderRadius(){
+  -webkit-border-radius: $standardCornerRadius;
+  -moz-border-radius: $standardCornerRadius;
+  -ms-border-radius: $standardCornerRadius;
+  -o-border-radius: $standardCornerRadius;
+  border-radius: $standardCornerRadius;
+}
+
+@mixin largeBorderRadius(){
+  -webkit-border-radius: $largeCornerRadius;
+  -moz-border-radius: $largeCornerRadius;
+  -ms-border-radius: $largeCornerRadius;
+  -o-border-radius: $largeCornerRadius;
+  border-radius: $largeCornerRadius;
+}
+
+@mixin noBorderRadius(){
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+@mixin endCapBorderRadius(){
+  -webkit-border-radius: 0 $standardCornerRadius $standardCornerRadius 0;
+  -moz-border-radius: 0 $standardCornerRadius $standardCornerRadius 0;
+  -ms-border-radius: 0 $standardCornerRadius $standardCornerRadius 0;
+  -o-border-radius: 0 $standardCornerRadius $standardCornerRadius 0;
+  border-radius: 0 $standardCornerRadius $standardCornerRadius 0;
+}
+
+@mixin noBoxShadow(){
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
