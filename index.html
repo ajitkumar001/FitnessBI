@@ -1,67 +1,27 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en">
-
-
-
 <head>
-
-
     <meta charset="utf-8">
-
     <title>FitnessBI Membership</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="">
-
     <meta name="author" content="">
-
-
-
     <title>Login page – FitnessBI</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-
     <link rel="stylesheet" href="styles/bootstrap-2.3.2.css">
-
     <link rel="stylesheet" href="styles/bootstrap-responsive-2.3.2.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
     <link rel="stylesheet" href="styles/main.css">
 
-
-
-
-
 </head>
-
-
-
 <body>
-
-
-
     <div class="container-fluid" ng-app="myApp">
-
-
-
         <div ui-view></div>
-
-
         <script type="text/ng-template" id="login.html">
-
-
-
             <div class="parentSec">
-               
                 <div class="mainSection">
-                    
                     <div class="col-md-4 col-md-offset-4" style="padding-top:100px;">
 
                         <div class="text-center"><img src="images/Logomain.png" class="img-responsive"></div>
@@ -111,9 +71,6 @@
             </div>
 
         </script>
-
-
-
         <script type="text/ng-template" id="home.html">
 
             <div ng-include="'menu.html'"></div>
@@ -127,61 +84,21 @@
                         <h2 class="bold" style="margin-bottom:10px;">Home</h2>
 
                         <a ui-sref="login" class="link">Back</a>
-
-
-
                     </div>
-
                     <div class="custimg hidden-xs">
-
-
-
                     </div>
-
                 </div>
-
-
-
             </div>
-
             <div style="clear:both;"></div>
-
             <div class="container main-container">
-
-
-
-
-
-
-
                 <div class="home-page text-center pad90">
-
-
-
                     <hr>
-
                     <h2>Welcome {{username }} !</h2>
-
                     <p>Get a fantastic quote in seconds with our quick select options</p>
-
                     <p><a ui-sref="membership" class="btn  btn-large">Add Membership</a></p>
 
-
-
-
-
-
-
-
-
                 </div> <!-- /.home-page -->
-
             </div>
-
-
-
-
-
         </script>
 
         <script type="text/ng-template" id="membership.html">
@@ -201,9 +118,6 @@
                 </div>
 
                 <div class="custimg hidden-xs">
-
-
-
                 </div>
 
             </div>
@@ -217,9 +131,6 @@
                     <hr />
 
                     <h3>Membership Type</h3>
-
-
-
                     <div class="row">
 
                         <div class="col-md-offset-3 col-md-6">
@@ -263,37 +174,15 @@
                                         <div class="price-btn bttn">
 
                                             <a ui-sref="Addgroup" class="btn">Add Group</a>
-
-
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
-
-
-
-
-
-
-
-
         </script>
-
-
-
         <script type="text/ng-template" id="Addgroup.html">
 
             <div ng-include="'menu.html'"></div>
@@ -305,15 +194,9 @@
                     <h2 class="bold" style="margin-bottom:10px;">Add Group</h2>
 
                     <span class="Unlink">Membership | </span><a ui-sref="membership" class="link">Back</a>
-
-
-
                 </div>
 
                 <div class="custimg hidden-xs">
-
-
-
                 </div>
 
             </div>
@@ -323,19 +206,9 @@
             <div class="container main-container">
 
                 <div class="home-page text-center pad60">
-
-
-
-
-
                     <div class="row">
 
                         <div class="col-md-offset-2 col-md-8">
-
-
-
-
-
                             <div class="boxSh">
 
                                 <div class="bxheader">
@@ -383,9 +256,6 @@
             </div>
 
         </script>
-
-
-
         <script type="text/ng-template" id="Membergroup.html">
 
             <div ng-include="'menu.html'"></div>
@@ -397,15 +267,9 @@
                     <h2 class="bold" style="margin-bottom:10px;">Add Group</h2>
 
                     <span class="Unlink">Group Member | </span><a ui-sref="Addgroup" class="link">Back</a>
-
-
-
                 </div>
 
                 <div class="custimg hidden-xs">
-
-
-
                 </div>
 
             </div>
@@ -415,19 +279,9 @@
             <div class="container main-container">
 
                 <div class="home-page text-center pad60">
-
-
-
-
-
                     <div class="row">
 
                         <div class="col-md-offset-1 col-md-10">
-
-
-
-
-
                             <div class="boxSh">
 
                                 <div class="bxheader">
@@ -439,39 +293,55 @@
                                     <thead>
                                         <tr>
                                             <th>Group</th>
-                                            <th>Members</th>
-                                            <th></th>
+                                            <th>Membership</th>
+                                            <th>Action</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="playerPerTeam in playersToFilter() | filter:filterTeams">
-                                            <td>{{playerPerTeam.team}}</td>
+                                            <td><i class="fa fa-check-square-o" aria-hidden="true"></i> {{playerPerTeam.team}}</td>
                                             <td><div ng-repeat="itm in items | filter:{team: playerPerTeam.team}">{{itm.name}}</div></td>
                                             <td><button class="btn  btn-xs" ng-click="edit(item)">Edit</button> <button class="btn  btn-xs del" ng-click="deleteRow($index)">Delete</button></td>
+                                        </tr>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="3" style="border-bottom:1px solid #b7b7b7;">Remaining Membership</th>
 
                                         </tr>
+                                        <tr>
+                                            <th>Group</th>
+                                            <th>Membership</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div ng-repeat="grit in gritm track by $index"><i class="fa fa-check-square-o" aria-hidden="true"></i> {{ grit }} </div></td>
+                                            <td><div ng-repeat="contact in contacts track by $index">{{ contact }} </div></td>
+                                            <td><button class="btn  btn-xs" ng-click="edit(item)">Edit</button> <button class="btn  btn-xs del" ng-click="deleteitm($index)">Delete</button></td>
+                                        </tr>
                                     </tbody>
-                                    </table>
-                             <div style="clear:both"></div>
+                                </table>
+                                <div style="clear:both"></div>
                                 <div class="bxheader">
                                     <form role="form" ng-submit="AddItem()">
                                         <div class="row">
-                                            <div class="col-md-5"><input type="text" data-ng-model="item.team" placeholder="group" class="form-control "></div>
-                                            <div class="col-md-5"><input type="text" data-ng-model="item.name" placeholder="member" class="form-control "></div>
-                                            <div class="col-md-2"><input class="btn  btn-sm" type="submit" value="Add Item"></div>
+                                            <!--<div class="col-md-5"><input type="text" data-ng-model="item.team" placeholder="group" class="form-control "></div>-->
+                                            <div class="col-md-5 ">
+                                                <!--<input type="text" data-ng-model="item.name" placeholder="member" class="form-control ">-->
+                                                <select ng-model="selectedGroup" ng-options="i.items as i.items for i in groupItem" ng-init="selectedGroup=groupItem[0].id" class="form-control" placholder="Select Group"><option value="" disabled selected>Select Group</option></select>
+                                            </div>
+                                            <div class="col-md-5 ">
+                                                <select ng-model="selectedItem" ng-options="j.items as j.items for j in curItem" ng-init="selectedItem=curItem[0].id" class="form-control" placholder="Select Membership"><option value="" disabled selected>Select Membership</option></select>
+                                            </div>
+                                            <div class="col-md-2"><input class="btn  btn-sm " type="submit" value="Save" ng-click="save(selectedItem,selectedGroup)"></div>
+
+
                                         </div>
-                                        
-
-                                       
-
-                                        
-
                                     </form>
-                                    </div>
                                 </div>
-
-
-
+                            </div>
                         </div>
 
                     </div>
@@ -492,18 +362,6 @@
 
     <script src='http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js'></script>
 
-<script src="js/index.js"></script>
-
-
-
-
-
-
-
-
-
+    <script src="js/index.js"></script>
 </body>
-
-
-
 </html>

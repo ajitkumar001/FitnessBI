@@ -132,30 +132,18 @@
 
     app.controller('GroupController', function ($scope, $rootScope, $stateParams, $state, LoginService) {
 
-        $scope.products = ["Milk", "Bread", "Cheese", "Tea", "Cold Drink", "chips", "Popcorn", "Bar", "Coffe"];
+        // $scope.products = ["Milk", "Bread", "Cheese", "Tea", "Cold Drink", "chips", "Popcorn", "Bar", "Coffe"];
+        $scope.products = ["Baverage", "Snack"];
 
         $scope.addItem = function () {
-
             $scope.errortext = "";
-
             if (!$scope.addMe) { return; }
-
             if ($scope.products.indexOf($scope.addMe) == -1) {
-
                 $scope.products.push($scope.addMe);
-
             } else {
-
-                $scope.errortext = "The item is already in your shopping list.";
-
+                $scope.errortext = "The group is already in your shopping list.";
             }
-
         }
-
-
-
-
-
     });
 
 
@@ -177,28 +165,37 @@
         { name: 'Cold drink', team: 'Baverage' }
 
         ];
-        $scope.deleteRow = function (i) {
-            $scope.items.splice(i, 1);
-        };
+        $scope.curItem = [{ id: "1", items: "Cheese" }, { id: "2", items: "Bread" }, { id: "3", items: "Hard soda" }, { id: "4", items: "Wine" }, { id: "5", items: "Barley" }];
 
+        $scope.groupItem = [{ id: "1", items: "Baverage" }, { id: "2", items: "Snack" }, { id: "3", items: "Drink" }];
         var indexedTeams = [];
 
-        $scope.AddItem = function () {
-
-
-
-            // add to our js object array
-
-            $scope.items.push({
-
+        /*$scope.AddItem = function () {
+ 
+                $scope.items.push({
+ 
                 team: $scope.item.team,
-
                 name: $scope.item.name
-
+ 
             });
+ 
+        };*/
+        $scope.contacts = ["Cheese"];
+        $scope.gritm = ["Drink"];
 
+        $scope.save = function (i, j) {
+            if ($scope.contacts.indexOf(i) <= -1) {
+                $scope.contacts.push(i);
+            }
+            if ($scope.gritm.indexOf(j) <= -1) {
+                $scope.gritm.push(j);
+            }
         };
 
+        $scope.deleteitm = function (i,j) {
+            $scope.contacts.splice(i, 1);
+            $scope.gritm.splice(j, 1);
+        };
         $scope.editorEnabled = false;
 
         $scope.enableEditor = function () {
@@ -221,6 +218,7 @@
 
         }
 
+        
         $scope.filterTeams = function (player) {
 
             var teamIsNew = indexedTeams.indexOf(player.team) == -1;
@@ -234,7 +232,9 @@
             return teamIsNew;
 
         }
-
+        $scope.deleteRow = function (i) {
+            $scope.items.splice(i, 1);
+        };
 
 
 
